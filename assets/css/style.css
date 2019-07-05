@@ -895,15 +895,13 @@ a {
   grid-area: r2;
 }
 
-.form__container {
-  display: grid;
-  grid-template-areas: "f1 f2 f3";
-  grid-gap: 20px;
-}
-
 .form {
   background-color: #2d3651;
   padding: 30px 0;
+}
+
+.form--title {
+  display: none;
 }
 
 .form-input {
@@ -990,6 +988,12 @@ a {
   background: #d66926;
   border: 2px solid #ffffff;
   cursor: pointer;
+}
+
+.form__container {
+  display: grid;
+  grid-template-areas: "f1 f2 f3";
+  grid-gap: 20px;
 }
 
 .posts__container-tittle {

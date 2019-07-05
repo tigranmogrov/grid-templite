@@ -1,36 +1,10 @@
-.form__container {
-    @extend %container;
-    display: grid;
-    grid-template-areas: "f1 f2 f3";
-    grid-gap: $gap;
-
-
-    @include lg-min {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include lg-md {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include md-sm {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "f1 f1"
-            "f2 f3";
-    }
-
-    @include sm {
-        grid-template-columns: 1fr;
-        grid-template-areas: "f1"
-            "f2"
-            "f3";
-    }
-}
-
 .form {
     background-color: $color-main;
     padding: 30px 0;
-
+    &--title{
+       display: none;
+     }
+   
     &-input {
         height: $gap * 3;
         grid-area: f2;
@@ -86,5 +60,34 @@
             border: 2px solid $color-light;
             cursor: pointer;
         }
+    }
+}
+
+.form__container {
+    @extend %container;
+    display: grid;
+    grid-template-areas: "f1 f2 f3";
+    grid-gap: $gap;
+
+
+    @include lg-min {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include lg-md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "f1 f1"
+            "f2 f3";
+    }
+
+    @include sm {
+        grid-template-columns: 1fr;
+        grid-template-areas: "f1"
+            "f2"
+            "f3";
     }
 }

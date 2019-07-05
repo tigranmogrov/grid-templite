@@ -1,0 +1,11 @@
+temp/
+*.bat
+
+# IntellijIdea files
+.idea/
+
+
+node_modules/
+samples/
+package.json
+package-lock.json

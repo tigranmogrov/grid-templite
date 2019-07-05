@@ -1,0 +1,53 @@
+.footer-container {
+    display: grid;
+    justify-content: center;
+    background: $color-main;
+    height: 250px;
+}
+
+.footer--item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 50px;
+    grid-gap: $gap;
+
+    &-link {
+        color: $color-light;
+    }
+}
+
+
+
+.fab {
+    font-size: 2.25rem;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $color-accent;
+    }
+}
+
+.footer--line {
+    width: 75px;
+    height: 2px;
+    background: $color-gray-dark;
+    margin: 0 auto;
+}
+
+.footer--copyright {
+    text-align: center;
+    line-height: 1.2rem;
+    margin-bottom: $gap * 2;
+
+    :nth-of-type(1) {
+        letter-spacing: 0.38rem;
+        margin-left: 0.5rem;
+        font-weight: 100;
+    }
+
+    :nth-of-type(2) {
+        color: $color-light;
+        font-weight: 800;
+        letter-spacing: 0.12rem;
+    }
+}

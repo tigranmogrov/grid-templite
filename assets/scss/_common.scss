@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: $color-gray;
+    letter-spacing: 0.1em;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 3.75rem;
+    color: $color-light;
+}
+
+h2 {
+    font-family: "Roboto Slab", serif;
+    color: $color-main;
+    line-height: 1.2em;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: "Roboto Slab", serif;
+    color: $color-gray;
+}
+
+a {
+    text-decoration: none;
+    color: $color-light;
+}
+
+.btn {
+    min-width: 250px;
+    display: block;
+    padding: 18px 20px;
+    height: 60px;
+    border: 2px solid $color-light;
+    text-align: center;
+    font-size: 1.125rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #d66926;
+    box-shadow: 2px 3px 14px #000;
+}
+
+.btn-accent {
+    @extend %btn-accent;
+}

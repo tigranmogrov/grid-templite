@@ -1,21 +1,27 @@
 .form {
     background-color: $color-main;
     padding: 30px 0;
-    &--title{
-       display: none;
-     }
-   
+
+    @include lg {
+        padding: 20px 0;
+    }
+
+    &--title {
+        display: none;
+    }
+
     &-input {
         height: $gap * 3;
         grid-area: f2;
         padding: 0 0 0 30px;
-        background-color: $color-main + #100F0F;
         color: $color-light;
         outline: none;
         border: 2px solid transparent;
-        border-bottom-color: $color-light;
-        transition: background-color 0.3s, border-color 0.3s;
+        border-bottom-color: rgba($color-light, 0.25);
+        background-color: rgba($color-light, 0.05);
         font-size: 1.125rem;
+        letter-spacing: 0.1em;
+        transition: background-color 0.5s, border-color 0.5s;
 
         &::placeholder {
             color: $color-gray;
@@ -23,11 +29,9 @@
 
         &:hover,
         &:focus {
-            background-color: $color-gray-dark + #000;
-            border-color: $color-gray;
+            border-color: rgba($color-light, 0.15);
             border-bottom-color: $color-light;
-
-
+            background-color: rgba($color-light, 0.15);
 
 
             &::placeholder {
@@ -36,9 +40,9 @@
         }
 
         &:nth-of-type(1) {
-            text-transform: capitalize;
             grid-area: f1;
         }
+
 
 
     }
@@ -47,17 +51,18 @@
     &-submit {
         height: $gap * 3;
         text-align: center;
-        background-color: $color-gray-dark + #000;
+        font-size: 1.125rem;
+        letter-spacing: 0.125em;
         color: $color-light;
         grid-area: f3;
-        border: none;
         border: 2px solid transparent;
-        border-bottom: 2px solid $color-gray + #222;
-        transition: all 0.3s;
+        border-bottom-color: rgba($color-light, 0.20);
+        background-color: rgba($color-light, 0.10);
+        transition: background-color 0.5s, border-color 0.5s;
 
         &:hover {
-            background: $color-accent;
-            border: 2px solid $color-light;
+            background-color: $color-accent;
+            border-color: $color-light;
             cursor: pointer;
         }
     }

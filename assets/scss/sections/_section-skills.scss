@@ -1,44 +1,53 @@
 .skills {
-    padding: 10px;
+    @include sm-min {
+        padding: 10px 10px 40px;
+    }
+
+    @include sm {
+        padding: $gap;
+    }
 
     &__container {
         display: grid;
         padding-bottom: $gap;
         grid-gap: 10px;
-          grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "a1 a1 a2 a3""a4 a5 a5 a6""a7 a8 a9 a6";
-        
-		
-		   @include lg-md {
+
+        @include lg-min {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "a1 a1 a2 a3""a4 a5 a5 a6""a7 a8 a9 a6";
+        }
+
+        @include lg-md {
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas: "a1 a1 a2"
-				                 "a3 a4 a4"
-				                 "a5 a5 a6"
-				                 "a7 a8 a6"
-				                 "a7 a9 a9";
+                "a3 a4 a4"
+                "a5 a5 a6"
+                "a7 a8 a6"
+                "a7 a9 a9";
         }
-		
-		 @include md-sm {
+
+        @include md-sm {
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas: "a1 a2"
-				                 "a3 a2"
-				                 "a4 a4"
-				                 "a5 a6"
-				                 "a5 a7"
-				                 "a8 a9";
+                "a3 a2"
+                "a4 a4"
+                "a5 a6"
+                "a5 a7"
+                "a8 a9";
         }
-		
-		 @include sm {
+
+        @include sm {
+            grid-gap: $gap;
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas: "a1"
-				                 "a2"
-				                 "a3"
-				                 "a4"
-				                 "a5"
-				                 "a6"
-				                 "a7"
-				                 "a8"
-				                 "a9";
+                "a2"
+                "a3"
+                "a4"
+                "a5"
+                "a6"
+                "a7"
+                "a8"
+                "a9";
         }
     }
 
@@ -50,7 +59,7 @@
     min-height: calc(33vh - 12px);
     overflow: hidden;
     transition: 0.3s;
-   
+
 
     &__overlay {
         position: absolute;
@@ -145,8 +154,8 @@
     }
 
 }
+
 .skills__button {
     display: flex;
     justify-content: center;
-    padding-bottom: $gap;
 }

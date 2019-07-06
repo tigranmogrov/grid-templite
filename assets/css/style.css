@@ -615,7 +615,7 @@ a {
 }
 
 .header-navbar__list {
-  margin: 0 -25px 0 0;
+  margin-right: 0 -25px 0 0;
   padding: 0;
   list-style-type: none;
 }
@@ -1003,9 +1003,11 @@ a {
 .post-item {
   display: grid;
   background-color: rgba(229, 229, 229, 0.2);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s, -webkit-transform 0.3s;
 }
 
 .post-item:hover {

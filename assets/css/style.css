@@ -1080,7 +1080,8 @@ a {
 @media (max-width: 575px) {
   .posts__container .posts-tittle {
     font-size: 1.5rem;
-    text-align: center; } }
+    text-align: center;
+    margin-bottom: 36px; } }
 
 .post__block {
   display: -ms-grid;

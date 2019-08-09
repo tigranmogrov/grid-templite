@@ -3,23 +3,22 @@
 
     &__container {
         display: grid;
-
         @extend %container;
     }
 
     &__title {
         text-align: center;
         letter-spacing: 0.08em;
-        margin-top: 0;
-        line-height: 1.65;
+        line-height: 1.2;
 
         @include lg-min {
             font-size: 3.75rem;
+            margin: 0 0 53px 0;
         }
 
         @include lg {
             margin: 0 0 35px;
-            font-size: 2.5rem;
+            font-size: 1.875em;
         }
 
         @include sm {

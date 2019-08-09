@@ -40,6 +40,7 @@
     @include lg-min {
         p {
             font-size: 1.125rem;
+
         }
     }
 
@@ -63,6 +64,7 @@
     }
 
     @include md-sm {
+
         p:first-of-type:after {
             top: 90px;
         }
@@ -86,6 +88,11 @@
     }
 
     @include sm {
+        padding-right: 0;
+        letter-spacing: 1px;
+        line-height: 1em;
+
+
         p:first-of-type:after {
             display: none;
         }
